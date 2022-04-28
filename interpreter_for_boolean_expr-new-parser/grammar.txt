@@ -1,0 +1,29 @@
+Exp             ->  term (oder term)*
+                ->  KEYWORD: VAR IDENTIFIER EQ expr
+
+Term            -> Faktor  (und Faktor)*
+
+Faktor          -> "True" | "False" 
+
+Faktor          ->  !  | Faktor 
+
+Faktor          ->  "("   exp  ")"
+
+Faktor          -> number operator number
+
+operator        -> ==|>=|<=|>|<|!=
+
+number          -> INT|FLOAT
+                -> "("   exp  ")"
+
+
+
+
+expr            -> term (or term)*
+term            -> equality (und equality)*
+equality        -> comparsion (== | != comparsion)*
+comparsion      -> unary ((>=|<=|>|<) unary)*
+unary           -> "!" unary | primary
+primary         -> NUMBER | "true" | "false" | '(' expr ')'
+
+
